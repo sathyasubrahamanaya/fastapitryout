@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/index")
 def index():
-    return {"message":"Hi welcome to my world!..."}
+    return {"name":"sathya","designation":"ML engineer"}
