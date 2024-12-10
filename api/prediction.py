@@ -6,9 +6,9 @@ import numpy as np
 
 
 def predict_price(size,total_sqft,bath,balcony,location):
-  model = joblib.load("model/model.joblib")
+  model = joblib.load("api/model/model.joblib")
   
-  location_encoder = joblib.load("model/location_encoder.joblib")
+  location_encoder = joblib.load("api/model/location_encoder.joblib")
   available_locations = list(location_encoder.get_feature_names_out())
  
   print(available_locations)
@@ -22,7 +22,7 @@ def predict_price(size,total_sqft,bath,balcony,location):
   return  model.predict(input_data)
 
 def get_city_map():
-   location_encoder = joblib.load("model/location_encoder.joblib")
+   location_encoder = joblib.load("api/model/location_encoder.joblib")
    available_locations = list(location_encoder.get_feature_names_out()) 
    city_map = dict(list(enumerate(available_locations,1)))
    return city_map
