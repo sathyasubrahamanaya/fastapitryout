@@ -16,7 +16,7 @@ class Product:
         self.price = price
 
 class ProductRequest(BaseModel):
-    id: Optional[int] = None
+    id: int| None = None
     name: str = Field(min_length=1)
     category: str = Field(min_length=1)
     description: str = Field(min_length=1, max_length=100)
