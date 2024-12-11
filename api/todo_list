@@ -1,0 +1,12 @@
+crud operations
+pydantic 
+routers
+path
+------------> wedensday
+sql_introduction
+crud, and select, ORM
+integrating alembic, sql model and pg admin to fastapi
+-----------------> thursdday
+friday
+------
+building api's with database
